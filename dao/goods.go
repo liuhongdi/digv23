@@ -10,6 +10,7 @@ import (
 
 //decrease stock
 func DecreaseOneGoodsStock(goodsId int64,buyNum int) error {
+	fmt.Println("DecreaseOneGoodsStock begin")
     //查询商品信息
 	goodsOne:=&model.Goods{}
 	err := global.DBLink.Where("goodsId=?",goodsId).First(&goodsOne).Error
